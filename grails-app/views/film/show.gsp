@@ -16,10 +16,17 @@
        <p>${film}</p>
    </g:each>
    <g:form action="add">
+       <p>Name</p>
        <g:textField name="name"/>
+       <p>Description</p>
        <g:textField name="description"/>
        <g:submitButton name="add" value="add"/>
    </g:form>
+<g:formRemote name="addSession" update="sessionList"
+              url="[controller: 'session', action:'addSession']">
+    Book Id: <input name="id" type="text" />
+</g:formRemote>
+<div id="sessionList"></div>
 
 </body>
 </html>

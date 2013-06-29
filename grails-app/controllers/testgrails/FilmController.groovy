@@ -15,7 +15,11 @@ class FilmController {
         [films: result]
     }
 
-    def hello(){
-        render "Hello world"
+    def add(){
+        Film film = new Film()
+        film.name = params.name
+        film.description = params.description
+        film.save()
+        redirect action: 'show', filmId: film.id
     }
 }
