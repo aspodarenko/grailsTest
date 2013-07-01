@@ -1,18 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="JAVA_MODULE" version="4">
   <component name="FacetManager">
-    <facet type="Spring" name="Spring">
-      <configuration>
-        <fileset id="Grails" name="Grails" removed="false">
-          <file>file://$MODULE_DIR$/web-app/WEB-INF/applicationContext.xml</file>
-        </fileset>
-      </configuration>
-    </facet>
     <facet type="web" name="GrailsWeb">
       <configuration>
         <webroots>
-          <root url="file://$MODULE_DIR$/web-app" relative="/" />
-          <root url="file://$MODULE_DIR$/grails-app/views" relative="/" />
+          <root url="file://$USER_HOME$/.grails/2.2.3/projects/testGrails/plugins/jquery-1.8.3/web-app" relative="/" />
+          <root url="file://$USER_HOME$/.grails/2.2.3/projects/testGrails/plugins/database-migration-1.3.2/grails-app/views" relative="/" />
         </webroots>
         <sourceRoots />
       </configuration>
@@ -25,22 +18,43 @@
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
-    <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/src/java" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/grails-app/utils" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/grails-app/i18n" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/grails-app/taglib" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/test/integration" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/test/functional" isTestSource="true" />
-      <excludeFolder url="file://$MODULE_DIR$/target/classes" />
-      <excludeFolder url="file://$MODULE_DIR$/target/test-classes" />
+    <content url="file://$USER_HOME$/.grails/2.2.3/projects/testGrails/plugins/cache-1.0.1">
+      <sourceFolder url="file://$USER_HOME$/.grails/2.2.3/projects/testGrails/plugins/cache-1.0.1/src/java" isTestSource="false" />
+      <sourceFolder url="file://$USER_HOME$/.grails/2.2.3/projects/testGrails/plugins/cache-1.0.1/src/groovy" isTestSource="false" />
+      <sourceFolder url="file://$USER_HOME$/.grails/2.2.3/projects/testGrails/plugins/cache-1.0.1/grails-app/services" isTestSource="false" />
+      <sourceFolder url="file://$USER_HOME$/.grails/2.2.3/projects/testGrails/plugins/cache-1.0.1/grails-app/taglib" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/.grails/2.2.3/projects/testGrails/plugins/database-migration-1.3.2">
+      <sourceFolder url="file://$USER_HOME$/.grails/2.2.3/projects/testGrails/plugins/database-migration-1.3.2/src/groovy" isTestSource="false" />
+      <sourceFolder url="file://$USER_HOME$/.grails/2.2.3/projects/testGrails/plugins/database-migration-1.3.2/grails-app/controllers" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/.grails/2.2.3/projects/testGrails/plugins/geb-0.9.0" />
+    <content url="file://$USER_HOME$/.grails/2.2.3/projects/testGrails/plugins/hibernate-2.2.3">
+      <sourceFolder url="file://$USER_HOME$/.grails/2.2.3/projects/testGrails/plugins/hibernate-2.2.3/grails-app/i18n" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/.grails/2.2.3/projects/testGrails/plugins/jquery-1.8.3">
+      <sourceFolder url="file://$USER_HOME$/.grails/2.2.3/projects/testGrails/plugins/jquery-1.8.3/src/groovy" isTestSource="false" />
+      <sourceFolder url="file://$USER_HOME$/.grails/2.2.3/projects/testGrails/plugins/jquery-1.8.3/grails-app/i18n" isTestSource="false" />
+      <sourceFolder url="file://$USER_HOME$/.grails/2.2.3/projects/testGrails/plugins/jquery-1.8.3/grails-app/services" isTestSource="false" />
+      <sourceFolder url="file://$USER_HOME$/.grails/2.2.3/projects/testGrails/plugins/jquery-1.8.3/grails-app/taglib" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/.grails/2.2.3/projects/testGrails/plugins/resources-1.2">
+      <sourceFolder url="file://$USER_HOME$/.grails/2.2.3/projects/testGrails/plugins/resources-1.2/src/java" isTestSource="false" />
+      <sourceFolder url="file://$USER_HOME$/.grails/2.2.3/projects/testGrails/plugins/resources-1.2/src/groovy" isTestSource="false" />
+      <sourceFolder url="file://$USER_HOME$/.grails/2.2.3/projects/testGrails/plugins/resources-1.2/grails-app/i18n" isTestSource="false" />
+      <sourceFolder url="file://$USER_HOME$/.grails/2.2.3/projects/testGrails/plugins/resources-1.2/grails-app/taglib" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME$/.grails/2.2.3/projects/testGrails/plugins/spock-0.7" />
+    <content url="file://$USER_HOME$/.grails/2.2.3/projects/testGrails/plugins/tomcat-2.2.3" />
+    <content url="file://$USER_HOME$/.grails/2.2.3/projects/testGrails/plugins/webxml-1.4.1">
+      <sourceFolder url="file://$USER_HOME$/.grails/2.2.3/projects/testGrails/plugins/webxml-1.4.1/src/groovy" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="1.7 (1)" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" scope="PROVIDED" name="grails-2.2.3" level="application" />
     <orderEntry type="module-library" exported="">
-      <library name="Grails User Library (testGrails)">
+      <library name="Grails User Library (testGrails-grailsPlugins)">
         <CLASSES>
-          <root url="file://$MODULE_DIR$/lib" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/org.eclipse.jdt.core.compiler/ecj/jars/ecj-3.7.2.jar!/" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/net.sourceforge.htmlunit/htmlunit/jars/htmlunit-2.8.jar!/" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/org.seleniumhq.selenium/selenium-htmlunit-driver/jars/selenium-htmlunit-driver-2.0a7.jar!/" />
@@ -76,11 +90,8 @@
         </CLASSES>
         <JAVADOC />
         <SOURCES />
-        <jarDirectory url="file://$MODULE_DIR$/lib" recursive="false" />
       </library>
     </orderEntry>
-    <orderEntry type="module" module-name="testGrails-grailsPlugins" />
-    <orderEntry type="library" name="grails-2.2.3" level="application" />
   </component>
 </module>
 
