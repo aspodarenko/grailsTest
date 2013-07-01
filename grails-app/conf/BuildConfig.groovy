@@ -40,6 +40,14 @@ grails.project.dependency.resolution = {
 
     dependencies {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes e.g.
+        test "org.gebish:geb-spock:0.9.0"
+        test "org.gebish:geb-junit4:0.9.0"
+        test "org.seleniumhq.selenium:selenium-support:2.0a7"
+        test "org.seleniumhq.selenium:selenium-firefox-driver:2.0a7"
+        test("org.seleniumhq.selenium:selenium-htmlunit-driver:2.0a7") {
+            exclude 'xml-apis'
+        }
+        test "org.spockframework:spock-grails-support:0.7-groovy-2.0"
 
         // runtime 'mysql:mysql-connector-java:5.1.22'
     }
@@ -59,5 +67,7 @@ grails.project.dependency.resolution = {
         runtime ":database-migration:1.3.2"
 
         compile ':cache:1.0.1'
+        test ":spock:0.7"
+        test ":geb:0.9.0"
     }
 }
