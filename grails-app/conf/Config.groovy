@@ -29,6 +29,7 @@ grails.mime.types = [
     xml:           ['text/xml', 'application/xml']
 ]
 
+
 // URL Mapping Cache Max Size, defaults to 5000
 //grails.urlmapping.cache.maxsize = 1000
 
@@ -66,6 +67,11 @@ environments {
     production {
         grails.logging.jul.usebridge = false
         // TODO: grails.serverURL = "http://www.changeme.com"
+    }
+    custom {
+
+        disable.auto.recompile=false
+        grails.gsp.enable.reload=true
     }
 }
 

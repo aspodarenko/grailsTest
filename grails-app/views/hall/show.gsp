@@ -16,8 +16,8 @@
     <p>${hall}</p>
 </g:each>
 <g:form action="add">
-    <g:textField name="name"/>
-    <g:textField name="placesCount"/>
+    <p>Hall name: <g:textField name="name"/> </p>
+    <p>places count <g:textField name="placesCount"/> </p>
     <g:submitButton name="add" value="add"/>
 </g:form>
 

@@ -30,7 +30,7 @@ class FilmServiceTests {
         Session session2 = new Session()
         session2.film = film
         session2.time = "16:00"
-        Session.metaClass.'static'.findByFilm = {Film film1 -> [session1, session2] as List }
+        Session.metaClass.'static'.findAllByFilm = {Film film1 -> [session1, session2] as List }
 
         //when
         def actual = service.getFilmDisplayInfo(film)

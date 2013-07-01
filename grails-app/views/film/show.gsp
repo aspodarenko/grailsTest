@@ -9,23 +9,34 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
+    <g:javascript library='jquery' />
+    <g:javascript src="jquery/jquery-1.7.1.min.js"/>
   <title></title>
 </head>
+<script>
+    function _after(response) {
+        alert('hello');
+    }
+</script>
 <body>
    <g:each var="film" in="${films}">
        <p>${film}</p>
    </g:each>
    <g:form action="add">
-       <p>Name</p>
-       <g:textField name="name"/>
-       <p>Description</p>
-       <g:textField name="description"/>
+       <p>Name <g:textField name="name"/>
+       </p>
+       <p>Description <g:textField name="description"/>
+       </p>
        <g:submitButton name="add" value="add"/>
    </g:form>
-<g:formRemote name="addSession" update="sessionList"
-              url="[controller: 'session', action:'addSession']">
-    Book Id: <input name="id" type="text" />
-</g:formRemote>
+<g:form name="addSession"  >
+    Sessions for the last film
+    <p>Session price: <g:textField name="price"/></p>
+    <p>Session time: <g:textField name="time"/></p>
+    <p><g:select name="hallId" from="${halls}" optionKey="id"/> </p>
+    <g:textField name="filmId" value="${filmId}" hidden="true"/>
+    <g:submitToRemote action="add" controller="session" name="addSession" value="add session" update="sessionList"/>
+</g:form>
 <div id="sessionList"></div>
 
 </body>

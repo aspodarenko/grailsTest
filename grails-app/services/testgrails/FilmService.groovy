@@ -2,9 +2,9 @@ package testgrails
 
 class FilmService {
 
-    def getFilmDisplayInfo = { film ->
+    def getFilmDisplayInfo = {film ->
          String result = "name: " + film.name + " Description: " + film.description +" Session time: "
-         Session.findByFilm(film).each {
+         Session.findAllByFilm(film).each {
             result += it.time+" "
          }
         result

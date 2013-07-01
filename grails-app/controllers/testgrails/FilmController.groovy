@@ -1,18 +1,14 @@
 package testgrails
 
-class FilmController {
+import java.text.SimpleDateFormat
 
-    FilmController(){
-       FilmService service = new FilmService()
-       Film.metaClass.display = service.getFilmDisplayInfo
-    }
+class FilmController {
+    FilmService service = new FilmService()
+    FilmUtil util = new FilmUtil()
 
     def show() {
-        List<String> result = []
-        Film.findAll().each {
-            result.add(it.display)
-        }
-        [films: result]
+        SimpleDateFormat sdf = new SimpleDateFormat("hh:mm");
+        [films: util.displayWhichHasSessionLater(service.getFilmDisplayInfo,Film.getAll(),sdf.parse("16:00")), filmId: params.filmId, halls: Hall.findAll()]
     }
 
     def add(){
@@ -20,6 +16,6 @@ class FilmController {
         film.name = params.name
         film.description = params.description
         film.save()
-        redirect action: 'show', filmId: film.id
+        redirect (action: 'show', params: [filmId: film.id])
     }
 }
