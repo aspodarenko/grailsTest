@@ -11,15 +11,4 @@ class Hall {
     static constraints = {
     }
 
-    List<Session> getSessionList() {
-        if (sessionList == null){
-            sessionList = []
-        }
-        return sessionList
-    }
-
-    @Override
-    String toString() {
-        return name
-    }
 }
