@@ -14,7 +14,6 @@ import java.text.SimpleDateFormat
  */
 class FilmUtilTest {
 
-    FilmUtil filmUtil
     FilmService filmService
     List<Film> films
 
@@ -25,7 +24,7 @@ class FilmUtilTest {
     @Before
     public void setUp() {
         films = new LinkedList<Film>()
-        filmUtil = new FilmUtil()
+
         filmService = new FilmService()
         film = new Film()
         film.name="name1"
@@ -50,7 +49,7 @@ class FilmUtilTest {
     @Test
     public void whenOneHasSessionLaterDateAndOneBefore() {
         SimpleDateFormat sdf = new SimpleDateFormat("hh:mm");
-        List<String> result = filmUtil.displayWhichHasSessionLater(testFilmDisplay,films,sdf.parse("16:00"))
+        List<String> result = filmService.displayWhichHasSessionLater(testFilmDisplay,films,sdf.parse("16:00"))
         assert film2.name == result.get(0)
 
     }
